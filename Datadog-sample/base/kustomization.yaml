@@ -1,0 +1,11 @@
+resources:
+  - secret.yaml
+  - external-secret.yaml
+
+helmCharts:
+  - name: datadog
+    releaseName: datadog-agent
+    repo: https://helm.datadoghq.com
+    version: 2.36.0 # 사용하려는 버전 지정
+    namespace: datadog
+    valuesFile: datadog-values.yaml
