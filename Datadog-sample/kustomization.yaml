@@ -8,3 +8,6 @@ helmCharts:
   repo: https://helm.datadoghq.com
   releaseName: datadog
   valuesFile: datadog-values.yaml
+
+resources:
+- datadog-secret.yaml
