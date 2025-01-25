@@ -4,6 +4,7 @@ datadog:
   tags:
     - "env:devops"
     - "module:devops"
+  hostname: "custom-hostname"
   apm:
     enabled: true
     portEnabled: true
