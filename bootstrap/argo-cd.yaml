@@ -20,6 +20,8 @@ spec:
   source:
     path: bootstrap/argo-cd
     repoURL: https://github.com/Daekwang-Kim/datadog-configuration.git
+    kustomize:
+      buildOptions: "--enable-helm"
   syncPolicy:
     automated:
       allowEmpty: true
