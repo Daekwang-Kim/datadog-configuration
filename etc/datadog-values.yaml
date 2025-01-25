@@ -35,6 +35,10 @@ agents:
       operator: "Equal"
       value: "amd64"
       effect: "NoSchedule"
+    - key: "dedicated"
+      operator: "Equal"
+      value: "datadog"
+      effect: "NoSchedule"
 
   containers:
     agent:
