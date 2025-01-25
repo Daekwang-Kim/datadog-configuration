@@ -21,6 +21,9 @@ datadog:
 
   containerExclude: "kube_namespace:.*"
   containerInclude: "kube_namespace:namespaceName name:containerName"
+
+  kubelet:
+    tlsVerify: false
   
 agents:
   annotations:
