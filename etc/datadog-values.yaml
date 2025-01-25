@@ -6,7 +6,7 @@ datadog:
     - "module:devops"
   hostname: "custom-hostname"
   apm:
-    enabled: false
+    enabled: true
     portEnabled: true
     hostPortConfig:
       enabled: true
@@ -21,20 +21,10 @@ datadog:
 
   containerExclude: "kube_namespace:.*"
   containerInclude: "kube_namespace:namespaceName name:containerName"
-
-  kubelet:
-    tlsVerify: false
-
-  env:
-    - name: DD_HOSTNAME
-      valueFrom:
-        fieldRef:
-          fieldPath: spec.nodeName
   
 agents:
   annotations:
-    # autopilot.gke.io/no-connect: "false"
-    useHostNetwork: true
+    autopilot.gke.io/no-connect: "false"
     
   tolerations:
     - key: "cloud.google.com/compute-class"
@@ -74,6 +64,6 @@ agents:
           cpu: 100m
           memory: 200Mi
 
-# providers:
-#   gke:
-#     autopilot: true
+providers:
+  gke:
+    autopilot: true
