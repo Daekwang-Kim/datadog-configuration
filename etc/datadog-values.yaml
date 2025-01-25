@@ -24,7 +24,8 @@ datadog:
   
 agents:
   annotations:
-    autopilot.gke.io/no-connect: "false"
+    # autopilot.gke.io/no-connect: "false"
+    useHostNetwork: true
     
   tolerations:
     - key: "cloud.google.com/compute-class"
