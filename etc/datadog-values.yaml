@@ -64,6 +64,6 @@ agents:
           cpu: 100m
           memory: 200Mi
 
-providers:
-  gke:
-    autopilot: true
+# providers:
+#   gke:
+#     autopilot: true
