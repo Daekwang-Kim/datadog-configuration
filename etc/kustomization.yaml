@@ -7,7 +7,7 @@ helmCharts:
 - name: datadog
   repo: https://helm.datadoghq.com
   releaseName: datadog
-  valuesFile: datadog-values.yaml
+  valueFile: datadog-values.yaml
 
 resources:
 - datadog-secret.yaml

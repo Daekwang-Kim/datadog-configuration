@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: datadog
+  namespace: datadog
+spec:
+  project: default
+  source:
+    chart: datadog
+    repoURL: https://helm.datadoghq.com
+    targetRevision: 3.88.2
+    helm:
+      valueFiles:
+        - https://raw.githubusercontent.com/Daekwang-Kim/datadog-configuration/main/etc/datadog-values.yaml
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: datadog
