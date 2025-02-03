@@ -22,11 +22,12 @@ datadog:
   containerExclude: "kube_namespace:.*"
   containerInclude: "kube_namespace:namespaceName name:containerName"
 
-  clusterAgent:
-    enabled: true
 agents:
   annotations:
     autopilot.gke.io/no-connect: "false"
+
+  clusterAgent:
+    enabled: true
     
   tolerations:
     - key: "cloud.google.com/compute-class"
