@@ -19,8 +19,8 @@ datadog:
     enabled: true
   kubeStateMetricsEnabled: false
 
-  containerExclude: "kube_namespace:.*"
-  containerInclude: "kube_namespace:namespaceName name:containerName"
+  # containerExclude: "kube_namespace:.*"
+  # containerInclude: "kube_namespace:namespaceName name:containerName"
 
 agents:
   annotations:
